@@ -21,6 +21,17 @@ let state;
 
 
 // object
+//later we study more 
+//but remember
+//-->Everything in javascript isactuaaly an object
+
 
 console.log(typeof undefined); // undefined
 console.log(typeof null); // object
+
+
+//---> some interesting about datatype
+console.log(Number.MAX_VALUE);    //output-->1.7976931348623157e+308
+console.log(Number.MIN_VALUE);    //output--->5e-324
+console.log(Number.MAX_VALUE * 10);   //output-->infinity
+

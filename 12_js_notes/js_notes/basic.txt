@@ -1,0 +1,59 @@
+** java script 
+
+******Features of JavaScript******
+1.high level --> cross platform
+2.light-weighted --> low usage of system resources.
+3.interpreted--> executes line by  line.
+4.Just-in-time --->(JIT)  compilation is a method where code is compiled during the execution of a program, rather than before, to optimize performance
+5.multi-paradigm--> support different styles of writing the code.
+6.prototype Based--> Allows the creation of an object without first defining its class
+7.Synchronous--> codes runs in a particular sequence of instrutions.
+8.single Threaded--> It executes one line of code at a time.
+9.dynamic typed language-->capale of change at runtime.
+
+
+#####notes#####
+-->1==> "JavaScript can be used for client-side web development, server-side web development, and mobile application development."
+JavaScript is a versatile language that can be used across multiple platforms:
+
+
+-->2==> the following programming styles are supported by JavaScript are ["Procedural, Object-Oriented, and Functional Programming"]
+
+
+
+***********History of JS (ECMA)
+--> Evolution of JavaScript
+=>1991
+>internet got invented.
+>First web browser was mosaic.
+>created by marc andreessen and eric bina at university of lllinois.
+
+=>1993
+>NetScape was co-founded by Marc ANdreessen.
+>Only static websites were created using HTML.
+>Need for dynamic websites.
+
+=>1995
+>Brendan Eich was hired by NetScape
+>within 10 days - first draft of JavaScript was created.
+>MOCHA ---> LiveScript ---> JavaScript
+
+=>1996
+>Internet Explorer was launced by microsoft.
+>JScript was created by microsoft.
+>Reverse engineered JavaScript.
+
+>so there is problem created because differnt differnt browser are created there different differnt language so its very complex for developers
+so ECMA come.
+
+>ECMA -> European Computers Manifactures Association.
+
+
+==>1997
+>First version of ECMA 262 or ECMA script (ES) or now commonly known as javaScript was released.
+>so its now as standard language for all the browsers.
+
+
+NOTE**********
+-->What happens when someone miss semicolon at the end of a statement in JavaScript?
+==ans>> automatic semicolon insertion will add it.

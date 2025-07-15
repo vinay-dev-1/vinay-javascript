@@ -1,3 +1,10 @@
+/***********This  keyword */
+//==> This keyword refers to an object that is executing the current piece of code
+
+
+
+
+
 const user = {
     username: "hitesh",
     price: 999,

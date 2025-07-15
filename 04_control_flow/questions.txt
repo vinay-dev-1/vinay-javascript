@@ -1,0 +1,144 @@
+Qs1 ----->. Create a number variable num with some value.  
+            Now, print “good” if the number is divisible by 10 and print “bad” if it is not.
+ANS===>
+
+let num = 10;
+if(num%10 == 0){
+    console.log("good");
+}
+else{
+    console.log("bad")
+}
+ 
+
+Qs2.-----> Take the user's name & age as input using prompts.
+Then return back the following statement to the user as an alert (by substituting
+their name & age) :
+name is age years old.
+[Use template Literals to print this sentence]
+
+ANS===>
+
+let name = prompt("what is the user name");
+let age = prompt("what is the user age");
+
+alert(`the name is ${name} and the age is ${age}`);
+
+
+
+Qs3. Write a switch statement to print the months in a quarter.
+Months in Quarter 1 : January, February, March
+Months in Quarter 2 : April, May, June
+Months in Quarter 3 : July, August, September
+Months in Quarter 4: October, November, December
+[Use the number as the case value in switch]
+
+
+ANS===>
+let quarter = 5;
+switch(quarter){
+    case 1: console.log("january, february, march");
+    break;
+
+    case 2: console.log("April, May, June");
+    break;
+
+    case 3: console.log("july, august, september");
+    break;
+
+    case 4: console.log("october, november, december");
+    break;
+
+    default :console.log("no months");
+    break;
+}
+
+
+Qs4. A string is a golden string if it starts with the character ‘A’ or ‘a’ and has a total
+length greater than 5.
+For a given string print if it is golden or not.
+
+ANS====>
+let string = "Apples";
+
+if((string[0] == 'A' || string[0] == 'a') && (string.length > 5) ){
+    console.log("golden string");
+}
+else{
+    console.log("not a golden stirg");
+}
+
+
+
+Qs5. Write a program to find the largest of 3 numbers
+
+ANS=====>
+let a = 34554 ; b = 7676 , c = 56;
+if(a>b){
+    if(a>c){
+        console.log("a is greater");
+    }
+    else{
+        console.log("c is greater");
+    }
+}else{
+    if(b>c){
+        console.log("b is greater");
+    }
+    else{
+        console.log("c is greater");
+    }
+}
+
+
+//**********another method
+let a=4, b=5, c=6;
+
+if(a>b && a>c){
+    console.log("a is greater);
+}
+else{
+    if(b>a && b>c){
+        console.log("b is greater)
+    }
+    else{
+        console.log("c is greater);
+    }
+}
+
+Qs6 (Bonus). Write a program to check if 2 numbers have the same last digit.
+Eg : 32 and 47852 have the same last digit i.e. 2
+
+ANS====>
+let num1 = 56786;
+let num2 = 34556;
+
+if((num1%10)==(num2%10)){
+    console.log("both the number have same last digit")
+}
+else{
+    console.log("both the number have differnt last digit")
+}
+
+
+
+
+// celcius fahernit question
+function main(tempF) {
+    // Convert Fahrenheit to Celsius
+    let convertedCelsius = (tempF - 32) * 5 / 9;
+    // Round to one decimal place
+    let roundedCelsius = convertedCelsius.toFixed(1);
+
+    let result;
+    if (convertedCelsius >= 37) {
+        result = `You have a fever! Your temperature is ${roundedCelsius}ºC.`;
+    } else {
+        result = `You do not have a fever. Your temperature is ${roundedCelsius}ºC.`;
+    }
+    return result;
+}
+
+// Example usage:
+console.log(main(98.6)); // Output: You have a fever! Your temperature is
+
