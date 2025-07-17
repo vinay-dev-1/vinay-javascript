@@ -1,24 +1,37 @@
 // array
+//==>In JavaScript, an array is a collection of data values of any data type. Arrays are a fundamental data structure and are used to store and manipulate data
+//--> in javascript array are hetrogenous{beacuse it stores any data type value in a single element}
+//--> but in another language like java or c++ it is homogenous
+
+
+// NOTE********
+// $$$ Arrays in JavaScript are mutable. This means their content can be changed after they are created. You can add, remove, or modify elements within an array without creating a new array in memory.
+
 //=======================>declartion of array<=======================START
 const myArr = [0, 1, 2, 3, 4, 5]
 const myHeors = ["shaktiman", "naagraj"]
 
-//print array element by indices
-console.log(myArr[1]);     //output-->1
-console.log(myArr[4]);     //output-->4
+//--->mixed array with different datatype  {hetrogenous}
+let info = ["vinay","hemant", 25, 6.3,];  //mixed array
 
+//array can be created like that also using "new" keyword
 const myArr2 = new Array(1, 2, 3, 4)
 console.log(myArr[1]);
-
-//--->mixed array with different datatype
-let info = ["vinay","hemant", 25, 6.3,];  //mixed array
 
 //empty array
 let newArr1 = [];
 
+//print array element by indices or access by indices number
+console.log(myArr[1]);     //output-->1
+console.log(myArr[4]);     //output-->4
+
 //indices ke andar indices 
 console.log(info[0][0]);    //output-->v
 console.log(info[0][1]);    //output-->i
+
+//want to change any value
+info[0] = 'gaurav';
+console.log(info);    //output--> [ 'gaurav', 'hemant', 25, 6.3 ]
 
 //=======================>declartion of array<=======================END
 
@@ -33,17 +46,23 @@ console.log([1, 2, 4, 6].length);     //output--->4
 
 
 
-// ------------->Push and Pop meths<-------------
-//==> pop {add to end}
+// ----2nd--------->Push and Pop meths<-------------
+//==> push {add to end}
 let myArr5 = [2, 4, 5, 7];
 myArr5.push(6)   
 console.log(myArr5);    //output---> [2, 4, 5, 7, 6]; 
 myArr5.push(7);
 console.log(myArr5);    //output---> [2, 4, 5, 7, 6, 7]; 
-
 let cars = ["audi", "bmw", "xuv", "maruti"];
 cars.push("toyota");
 console.log(cars);    //output--> ["audi", "bmw", "xuv", "maruti", "toyota"];
+
+
+/**********one intersting thing******************* */
+const teams = ['csk', 'rcb', 'mi', 'dc'];
+const pushArray = teams.push('GT');
+console.log(pushArray); //output--> it actually returns the length of the araay after push the data.
+
 
 //==>pop {delete from end & retrun it}
 let myArr6 = [2, 4, 5, 7];
@@ -51,7 +70,7 @@ myArr6.pop()
 console.log(myArr6);    //output---> [2, 4, 5]; 
 
 
-// --------------------->shift and unshift method<---------------
+// ------3rd--------------->shift and unshift method<---------------
 // ==>unshift--> {add to the start}
 let cars2 = ["audi", "bmw", "xuv"];
 cars2.unshift("toyota")
@@ -62,13 +81,13 @@ cars2.shift("toyota");
 console.log(cars2);     //output-->["audi", "bmw", "xuv"];
 
 
-// ----------------------->{(indexOf) & (include)} method <-------------------
+// ------4th----------------->{(indexOf) & (include)} method <-------------------
 //----> indexOf --> returns index of something
 let cars6 = ["bmw", "audi", "xuv", "maruti"];
 console.log(cars6.indexOf("bmw"));    //output-->0   //-->present
 console.log(cars6.indexOf("xuv"));    //output-->2  //-->present
-console.log(cars6.indexOf("XUV"));    //output-->-1   //-->not present
-console.log(cars6.indexOf("lamborgini"));    //output-->-1   //-->not present
+console.log(cars6.indexOf("XUV"));    //output-->  -1   //-->not present
+console.log(cars6.indexOf("lamborgini"));    //output--> -1   //-->not present
 
 //----> include--> search for a value
 let cars7 = ["bmw", "audi", "xuv", "maruti"];
@@ -76,6 +95,17 @@ console.log(cars7.includes("bmw"));    //output-->true   //-->present
 console.log(cars7.includes("xuv"));    //output-->true  //-->present
 console.log(cars7.includes("XUV"));    //output-->false   //-->not present
 console.log(cars7.includes("lamborgini"));    //output-->false   //-->not present
+
+// -------5th--------------------->slice method<----------------------------------
+//--->NOTE:: slice method not make changes to the original array .its take copies
+let colors = ["red", "yellow", "blue", "orange", "pink", "white"];
+
+console.log(colors.slice());   //-->as it is colors array print beacuse no argument given
+// output--> [ 'red', 'yellow', 'blue', 'orange', 'pink', 'white' ]
+console.log(colors.slice(2));   //output-->[ 'blue', 'orange', 'pink', 'white' ]
+console.log(colors.slice(2, 3));   //output-->[ 'blue']
+console.log(colors.slice(-2));     //output-->['pink', 'white']
+console.log(colors.slice(colors.length-1));   //output--> white
 
 
 // ---------------------------->concat method<---------------------------
@@ -101,16 +131,7 @@ let final4 = primary1.reverse();
 console.log(final4);               //output----> [ 'red', 'yellow', 'blue' ]
 
 
-// ---------------------------->slice method<----------------------------------
-//--->NOTE:: slice method not change in original array itst take copies
-let colors = ["red", "yellow", "blue", "orange", "pink", "white"];
 
-console.log(colors.slice());   //-->as it is colors array print beacuse no argument given
-// output--> [ 'red', 'yellow', 'blue', 'orange', 'pink', 'white' ]
-console.log(colors.slice(2));   //output-->[ 'blue', 'orange', 'pink', 'white' ]
-console.log(colors.slice(2, 3));   //output-->[ 'blue']
-console.log(colors.slice(-2));     //output-->['pink', 'white']
-console.log(colors.slice(colors.length-1));   //output--> white
 
 
 // ----------------------------->splice method<---------------------------*****START*******8

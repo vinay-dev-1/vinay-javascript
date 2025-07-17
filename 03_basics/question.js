@@ -76,6 +76,8 @@ console.log(greet);
 changeGreet();
 
 
+
+
 //assignments questions ******
 // --> Question 1: 
 // Qs1. Write a JavaScript function that returns array elements larger than a number.
@@ -101,5 +103,51 @@ console.log(answer);
 /*Qs2. Write a JavaScript function to extract unique characters from a string.
 Example: str = “abcdabcdefgggh”
 ans = “abcdefgh” */
+
+
+
+
+// **************coding ninja questions
+//question-->1 =>
+    // Develop a JavaScript function called commonDigits that accepts two positive integers, num1, and num2, as parameters. The function should determine whether the numbers have an equal number of digits or not. If they have an equal number of digits then store true in the answer else store false.
+//-->ans-->
+
+function commonDigits(num1, num2){
+    function countDigits(n){
+         let count = 0
+         while(n>0){
+           n = Math.floor(n/10);
+           count++;
+    }
+      return count;
+    }
+
+    let digit1 = countDigits(num1);
+    let digit2 = countDigits(num2);
+
+    let answer = false;
+    if(digit1 === digit2){
+        answer = true;
+    }
+    return answer;
+}
+
+console.log(commonDigits(1234, 421));  //output--> false
+console.log(commonDigits(1234, 4241));  //output--> true
+
+
+//another method to solve this
+function commonDigits(num1, num2){
+    let n1 = num1.toString();
+    let n2 = num2.toString();
+
+    if(n1.length === n2.length){
+        return true;
+    }
+    else{
+        return false;
+    }
+} 
+console.log(commonDigits(1234, 1225));   //output---> true
 
 

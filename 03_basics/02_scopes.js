@@ -21,7 +21,7 @@ calSum1(1,2)
 let sum1 = 54;   //global scope--> its can use everywhere where we want to use
 function calSum2(a,b){
     let sum1 = a+b  // function scope--> this is use only in function
-    console.log(sum1); //function scope vala sum use hoga ==>3
+    console.log(sum1); //function scope vala sum use hoga ==>3   //kyuki vo closest
 }
 calSum2(1,2);
 console.log(sum1);  //-->global scope vala sum print hoga ==> 54
@@ -29,7 +29,7 @@ console.log(sum1);  //-->global scope vala sum print hoga ==> 54
 //****remember */
 let sum2 = 54;
 function calSum3(a,b){
-    console.log(sum);   //output-->54 
+    console.log(sum2);   //output-->54 
     //beacause if sum is not declare in function scope then the global scope sum use
 }
 /**************************************************************************** */
@@ -170,7 +170,6 @@ if (true) {
 //normal function decleration
 console.log(addone(5))  //--> output--> 6
 //no error pass becasue function ko kahi se bhi call karo its works
-
 function addone(num){
     return num + 1
 }
@@ -185,7 +184,7 @@ const addTwo = function(num){
 console.log(addTwo(5)); //-->output->7 {no error found}
 
 //==>now see what is function expression
-// ***Function Expression -->"to define a function with storing in a function
+// ***Function Expression -->"to define a function with storing in a variable
 let sum = function(a,b) {
     return a+b;
 }

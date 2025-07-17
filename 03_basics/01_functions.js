@@ -100,7 +100,7 @@ console.log("Result: ", result);
 /******************************************************** */
 
 
-//==>some more about return keyword
+//==>some more about return keyword*************
 
 // example-->
 function sum(a,b) {
@@ -108,7 +108,7 @@ function sum(a,b) {
     //issne value return kar di
 }
 sum(3, 4); //sum function ke pass bhi vo value aa gayi
-////ye value return karega par print nahi karega kyuki usse log nahi kiya
+////ye value sirf return karega par print nahi karega kyuki ussme log nahi kiya
 
 //-->print karane ke liye
 let s = sum(3,4);
@@ -129,7 +129,7 @@ console.log(sum(sum(1,2),3));  //output-->6
 
 
 
-//if user not pass any value
+//-->if user not pass any value
 function loginUserMessage(username){
     if(username === undefined){
         console.log("please enter a username");
@@ -166,7 +166,9 @@ function loginUserMessage(username = "sam"){
 // console.log(loginUserMessage("hitesh")) //-->output-->hitesh  {sam ko overwrite kar dega ye}
 
 
-//when we don,t know how many arguments pass
+
+
+//##############when we don,t know how many arguments pass
 // "..." issko rest operatror bhi bolte hai aur spread operator bhi
 //and isske use case ke upar depend karta hai kab spread bolenge kab rest bolenge
 //for now we take this as rest -->
@@ -204,5 +206,5 @@ function returnSecondValue(getArray){
 }
 console.log(returnSecondValue(myNewArray));
 
-//direct nhi pass kar sakte hai
+//direct bhi pass kar sakte hai
 console.log(returnSecondValue([200, 400, 500, 1000]));
